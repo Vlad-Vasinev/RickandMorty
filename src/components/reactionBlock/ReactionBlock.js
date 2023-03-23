@@ -72,7 +72,6 @@ const ReactionBlock = () => {
                 dispatch(favourStorageCreator(element));
             });
         }
-        console.log(favourState);
     }, [favourState]);
 
     useEffect(() => {

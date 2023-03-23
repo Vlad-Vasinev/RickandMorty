@@ -35,5 +35,3 @@ export const apiDataCreator = (payload) => {
 export const newApiDataCreator = (payload) => {
     return { type: "NEW_DATA", payload }
 }
-
-//...state, apiDataNew: [...state.apiDataNew.concat(action.payload) ]

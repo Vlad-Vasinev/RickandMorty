@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from './votingPage.module.css';
 import logo from '../../assets/images/logo.png';
@@ -7,9 +7,36 @@ import NavList from "../navList/NavList";
 import SearchBar from "../searchBar/SearchBar";
 import VotingBlock from "../votingBlock/VotingBlock";
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
+
+import { themeDarkCreator } from "../../store/themeReducer";
+import { themeLightCreator } from "../../store/themeReducer";
 
 const Voting = () => {
+
+    const themeAct = useSelector(state => state.theme.themeActive);
+    const dispatch = useDispatch();
+
+    const [title, setTitle] = useState("Voting");
+
+    useEffect(() => {
+        document.title = title;
+    });
+
+    if ( document.title === title && themeAct === true ) {
+        dispatch( themeDarkCreator() );
+    }
+    else {
+        dispatch( themeLightCreator() );
+    }
+
+    // const useEffect = (() => {
+
+    // },[]);
+
+    // const useNav = useNavigate();
+    // console.log(useNav);
 
     const primaryColor = useSelector(state => state.theme.themeColorPrimary);
     const secondaryColor = useSelector(state => state.theme.themeColorSecondary);

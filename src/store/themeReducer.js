@@ -1,5 +1,7 @@
 const theme = {
 
+    themeActive: false,
+
     colorPrimaryLight: "#1D1D1D",
     colorSecondaryLight: "#8C8C8C",
     backgroundLight: "#E5E5E5",
@@ -23,13 +25,21 @@ const theme = {
 
 }
 
+const THEME_CREATOR = "THEME_CREATOR";
+
 const THEME_CHANGE_LIGHT = "THEME_CHANGE_LIGHT";
 const THEME_CHANGE_DARK = "THEME_CHANGE_DARK";
 
 export const ThemeReducer = (state = theme, action) => {
     switch (action.type) {
+
+        case THEME_CREATOR: 
+        console.log(action.payload);
+            return {
+                ...state, themeActive: action.payload
+            }
+
         case THEME_CHANGE_LIGHT:
-            console.log('hihihih theme change light')
 
             return {
                 ...state,
@@ -75,4 +85,8 @@ export const themeLightCreator = (payload) => {
 
 export const themeDarkCreator = (payload) => {
     return { type: "THEME_CHANGE_DARK", payload }
+}
+
+export const themeCreator = (payload) => {
+    return { type: "THEME_CREATOR", payload };
 }
