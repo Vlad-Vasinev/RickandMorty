@@ -10,12 +10,29 @@ import SearchBar from "../searchBar/SearchBar";
 
 import { dislikeStorageDelete } from "../../store/dislikeReducer";
 
+import { themeDarkCreator } from "../../store/themeReducer";
+import { themeLightCreator } from "../../store/themeReducer";
+
 const DislikePage = () => {
 
     const dispatch = useDispatch();
 
     const stateDislike = useSelector(state => state.dislike.dislikeState);
     const dislikeStorage = useSelector(state => state.dislike.storageDislike);
+
+    const themeAct = useSelector(state => state.theme.themeActive);
+
+    const primaryColor = useSelector(state => state.theme.themeColorPrimary);
+    const secondaryColor = useSelector(state => state.theme.themeColorSecondary);
+
+    const bgDark = useSelector(state => state.theme.customBg);
+
+    if (themeAct === true) {
+        dispatch(themeDarkCreator());
+    }
+    else {
+        dispatch(themeLightCreator());
+    }
 
     function delItemFunc (elId) {
         dispatch( dislikeStorageDelete(elId) );
@@ -24,11 +41,11 @@ const DislikePage = () => {
     return (
         <div className={classes.reactionInner}>
             <div className={classes.reactionPrimary}>
-                <h1 className="primaryTitle">
+                <h1 className="primaryTitle" style={ {color: primaryColor} }>
                     Hi guest!
-                    <span className="primarySubtitle"> Welcome to my 2023 Front-end page </span>
+                    <span className="primarySubtitle" style={ {color: secondaryColor} }> Welcome to my 2023 Front-end page </span>
                 </h1>
-                <h2 className="secondaryTitle">
+                <h2 className="secondaryTitle" style={ {color: primaryColor} }>
                     Lets start using The Rick and Morty API
                 </h2>
                 <NavList></NavList>
@@ -36,7 +53,7 @@ const DislikePage = () => {
             <div className={classes.reactionSecondary}>
                 <div className={classes.dislikeBlock}>
                     <SearchBar></SearchBar>
-                    <div className={classes.blockDislike}>
+                    <div className={classes.blockDislike} style = { { backgroundColor: bgDark } }>
                         {
                             stateDislike ?
                                 dislikeStorage.map(el =>
@@ -51,11 +68,11 @@ const DislikePage = () => {
                                             </svg>
                                         </button>
                                         <img src={el.image} alt={el.name}></img>
-                                        <div> {el.name} </div>
+                                        <div style={ {color: primaryColor} }> {el.name} </div>
                                     </div>
                                 )
                                 :
-                                <div> you have nothing in dislikes section </div>
+                                <div style={ {color: primaryColor} }> you have nothing in dislikes section </div>
                         }
                     </div>
                 </div>

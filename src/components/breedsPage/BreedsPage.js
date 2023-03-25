@@ -8,6 +8,9 @@ import { getNewData } from "../../asyncAction/data";
 import { newApiDataCreator } from "../../store/dataReducer";
 import { counterCreator } from "../../store/breedsReducer";
 
+import { themeDarkCreator } from "../../store/themeReducer";
+import { themeLightCreator } from "../../store/themeReducer";
+
 // Добавьте это в ваш файл с компонентом
 // require('react-dom');
 // window.React2 = require('react');
@@ -19,7 +22,16 @@ const Breeds = () => {
     const newApiData = useSelector(state => state.data.apiDataNew);
     const primaryColor = useSelector(state => state.theme.themeColorPrimary);
 
+    const themeAct = useSelector(state => state.theme.themeActive);
+
     const dispatch = useDispatch();
+
+    if ( themeAct === true ) {
+        dispatch( themeDarkCreator() );
+    }
+    else {
+        dispatch( themeLightCreator() );
+    }
 
     function useLoadData() {
         dispatch(counterCreator(1));
@@ -58,8 +70,3 @@ const Breeds = () => {
 }
 
 export default Breeds;
-
-    // useEffect(() => {
-    //     console.log('effect is working')
-    //     dispatch(getNewData());
-    // }, []);

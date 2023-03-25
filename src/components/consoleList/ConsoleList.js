@@ -12,8 +12,10 @@ const ConsoleList = () => {
     const sortedData = useSelector(state => state.sort.sortedData);
     const consoleState = useSelector(state => state.console.consoleState);
 
+    const primaryColor = useSelector(state => state.theme.themeColorPrimary);
+
     return (
-        <ul className={classes.consoleList}>
+        <ul className={classes.consoleList} style={ {color: primaryColor} }>
             {
                 consoleState !== "" ? 
                 sortedData.map(el =>

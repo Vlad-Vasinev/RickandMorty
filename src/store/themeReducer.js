@@ -34,7 +34,6 @@ export const ThemeReducer = (state = theme, action) => {
     switch (action.type) {
 
         case THEME_CREATOR: 
-        console.log(action.payload);
             return {
                 ...state, themeActive: action.payload
             }

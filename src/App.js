@@ -34,12 +34,6 @@ export const App = () => {
     dispatch(themeDarkCreator());
   }
 
-  // const history = useHistory();
-
-  // console.log(history);
-
-  console.log('the page is reloading');
-
   return (
     <div className="App" style={{ backgroundColor: backgroundColorApp }}>
       <button

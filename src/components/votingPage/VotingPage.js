@@ -18,25 +18,12 @@ const Voting = () => {
     const themeAct = useSelector(state => state.theme.themeActive);
     const dispatch = useDispatch();
 
-    const [title, setTitle] = useState("Voting");
-
-    useEffect(() => {
-        document.title = title;
-    });
-
-    if ( document.title === title && themeAct === true ) {
+    if ( themeAct === true ) {
         dispatch( themeDarkCreator() );
     }
     else {
         dispatch( themeLightCreator() );
     }
-
-    // const useEffect = (() => {
-
-    // },[]);
-
-    // const useNav = useNavigate();
-    // console.log(useNav);
 
     const primaryColor = useSelector(state => state.theme.themeColorPrimary);
     const secondaryColor = useSelector(state => state.theme.themeColorSecondary);
