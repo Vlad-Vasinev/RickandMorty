@@ -11,6 +11,8 @@ import { counterCreator } from "../../store/breedsReducer";
 import { themeDarkCreator } from "../../store/themeReducer";
 import { themeLightCreator } from "../../store/themeReducer";
 
+import CustomLoad from "../customLoad/CustomLoad";
+
 // Добавьте это в ваш файл с компонентом
 // require('react-dom');
 // window.React2 = require('react');
@@ -44,6 +46,10 @@ const Breeds = () => {
             })
     }
 
+    function loadCustomCharacter() {
+        console.log('custom loading');
+    }
+
     return (
         <div style = { { color: primaryColor } }>
             breeds page! You can see all characters here!
@@ -65,6 +71,11 @@ const Breeds = () => {
             <button
                 onClick={useLoadData}
                 className={classes.loadMore} > load more </button>
+                <button
+                onClick = { loadCustomCharacter }
+                className={classes.loadCustom} > load your own character </button>
+
+                <CustomLoad></CustomLoad>
         </div>
     )
 }

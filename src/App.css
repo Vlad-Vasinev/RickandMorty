@@ -57,6 +57,7 @@ button {
   position: relative;
   height: auto;
   text-align: center;
+  padding-bottom: 60px;
 }
 
 .container {

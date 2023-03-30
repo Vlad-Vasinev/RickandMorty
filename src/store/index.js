@@ -13,6 +13,7 @@ import { DislikeReducer } from './dislikeReducer';
 import { ConsoleReducer } from './consoleReducer';
 import { BreedsReducer } from './breedsReducer';
 import { ThemeReducer } from './themeReducer';
+import { LoadReducer } from './loadReducer';
 
 const mixReducer = combineReducers({
     data: DataReducer,
@@ -23,6 +24,7 @@ const mixReducer = combineReducers({
     console: ConsoleReducer,
     breeds: BreedsReducer,
     theme: ThemeReducer,
+    load: LoadReducer,
 });
 
 const composedEnhancer = composeWithDevTools(

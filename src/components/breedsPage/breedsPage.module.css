@@ -19,8 +19,8 @@
     height: 140px;
 }
 
-.loadMore {
-    margin: 40px auto;
+.loadMore, .loadCustom {
+    margin: 40px auto 20px;
     color: #ffffff;
     background-color: #0093EF;
     border-radius: 10px;
@@ -29,4 +29,8 @@
     border: none;
     padding: 10px 4px;
     box-sizing: border-box;
+}
+
+.loadCustom{
+    display: block;
 }
