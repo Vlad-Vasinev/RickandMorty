@@ -76,10 +76,12 @@
     border-bottom: 1px solid #1D1D1D;
     padding-bottom: 2px;
     margin-left: 0;
-    max-width: 110px;
+    max-width: 80px;
     width: 100%;
     transition: all .3s;
     text-align: center;
+    font-size: 13px;
+    line-height: 100%;
 }
 
 .download:hover{
@@ -87,13 +89,20 @@
     border-bottom: 1px solid #3400F2;
 }
 
-.download img{
+.download:hover svg path{
+    fill: #ffffff;
+}
+
+.download svg{
     margin: 0 auto 2px;
     display: block;
     object-fit: cover;
     width: 100%;
-    max-height: 70px;
+    max-height: 110px;
     height: auto;
+}
+.download svg path{ 
+    transition: all .3s;
 }
 
 @media(max-width: 1360px) {
@@ -136,6 +145,12 @@
         width: 70%;
     }
 
+}
+
+@media(max-width: 576px){
+    .download{
+        max-width: 50px;
+    }
 }
 
 @media(max-width: 450px) {

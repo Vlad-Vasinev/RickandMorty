@@ -34,18 +34,20 @@ const DislikePage = () => {
         dispatch(themeLightCreator());
     }
 
-    function delItemFunc (elId) {
-        dispatch( dislikeStorageDelete(elId) );
+    function delItemFunc(elId) {
+        dispatch(dislikeStorageDelete(elId));
     }
 
     return (
         <div className={classes.reactionInner}>
+            <div className="decoration decoration_1"></div>
+            <div className="decoration decoration_2"></div>
             <div className={classes.reactionPrimary}>
-                <h1 className="primaryTitle" style={ {color: primaryColor} }>
+                <h1 className="primaryTitle" style={{ color: primaryColor }}>
                     Hi guest!
-                    <span className="primarySubtitle" style={ {color: secondaryColor} }> Welcome to my 2023 Front-end page </span>
+                    <span className="primarySubtitle" style={{ color: secondaryColor }}> Welcome to my 2023 Front-end page </span>
                 </h1>
-                <h2 className="secondaryTitle" style={ {color: primaryColor} }>
+                <h2 className="secondaryTitle" style={{ color: primaryColor }}>
                     Lets start using The Rick and Morty API
                 </h2>
                 <NavList></NavList>
@@ -53,7 +55,7 @@ const DislikePage = () => {
             <div className={classes.reactionSecondary}>
                 <div className={classes.dislikeBlock}>
                     <SearchBar></SearchBar>
-                    <div className={classes.blockDislike} style = { { backgroundColor: bgDark } }>
+                    <div className={classes.blockDislike} style={{ backgroundColor: bgDark }}>
                         {
                             stateDislike ?
                                 dislikeStorage.map(el =>
@@ -68,11 +70,11 @@ const DislikePage = () => {
                                             </svg>
                                         </button>
                                         <img src={el.image} alt={el.name}></img>
-                                        <div style={ {color: primaryColor} }> {el.name} </div>
+                                        <div style={{ color: primaryColor }}> {el.name} </div>
                                     </div>
                                 )
                                 :
-                                <div style={ {color: primaryColor} }> you have nothing in dislikes section </div>
+                                <div style={{ color: primaryColor }}> you have nothing in dislikes section </div>
                         }
                     </div>
                 </div>

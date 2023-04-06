@@ -58,6 +58,22 @@ button {
   height: auto;
   text-align: center;
   padding-bottom: 60px;
+  overflow-x: hidden;
+}
+
+.decoration {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FBE0DC;
+}
+
+.decoration_1 {
+  top: 20px;
+}
+
+.decoration_2 {
+  top: 60px;
 }
 
 .container {
@@ -109,13 +125,25 @@ button {
   height: auto;
 }
 
-.themeBtn {
-  top: 24px;
+.themeButtons{
   position: absolute;
+  top: 21px;
   z-index: 100;
   right: 28px;
-  max-width: 26px;
+  max-width: 120px;
   width: 100%;
+  background-color: #Ffffff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  height: 40px;
+}
+
+.themeBtn {
+  height: 31px;
+  position: relative;
+  width: 50%;
 }
 
 .themeBtn:hover svg path{
@@ -123,16 +151,13 @@ button {
 }
 
 .themeBtn svg{
+  width: 31px;
+  height: 31px;
   width: 100%;
 }
 
 .themeBtn svg path{
   transition: all .3s;
-}
-
-.themeBtn.lightTheme{
-  max-width: 31px;
-  right: 100px;
 }
 
 

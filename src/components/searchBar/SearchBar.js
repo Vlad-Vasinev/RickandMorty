@@ -14,7 +14,6 @@ const SearchBar = () => {
     const [input, Setinput] = useState("");
 
     const apiOldData = useSelector(state => state.data.apiData);
-    const dataState = useSelector(state => state.sort.stateChange);
 
     const bgDark = useSelector(state => state.theme.customBg);
 

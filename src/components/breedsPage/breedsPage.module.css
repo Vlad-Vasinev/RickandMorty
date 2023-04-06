@@ -1,9 +1,23 @@
+
+.breedsPageWrapper{
+    position: relative;
+}
+
+.breedsLoadArea{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all .3s;
+}
+
 .breedsList {
     margin-top: 40px;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 209px);
     grid-gap: 34px;
+    padding-top: 14px;
 }
 
 .breedsItem {
@@ -34,3 +48,4 @@
 .loadCustom{
     display: block;
 }
+

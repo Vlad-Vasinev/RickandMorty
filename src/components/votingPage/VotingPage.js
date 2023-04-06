@@ -8,7 +8,6 @@ import SearchBar from "../searchBar/SearchBar";
 import VotingBlock from "../votingBlock/VotingBlock";
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from "react-router-dom";
 
 import { themeDarkCreator } from "../../store/themeReducer";
 import { themeLightCreator } from "../../store/themeReducer";
@@ -32,6 +31,8 @@ const Voting = () => {
 
     return (
         <div className={classes.votingInner}>
+            <div className="decoration decoration_1"></div>
+            <div className="decoration decoration_2"></div>
             <div className={classes.votingPrimary} >
                 <div className="logo">
                     <img src={logo} alt="This project's logo" />

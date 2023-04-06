@@ -16,28 +16,28 @@ const NavList = () => {
         <ul className={classes.navList} >
             <li className={classes.navItem}>
                 <div className={classes.navItemImg}>
+                    <img src={navItemImg_3} alt=""></img>
+                </div>
+                <Link className={classes.navItemLink} style={{ background: backgroundNav }} to="/"> homePage </Link>
+            </li>
+            <li className={classes.navItem}>
+                <div className={classes.navItemImg}>
                     <img src={navItemImg_1} alt=""></img>
                 </div>
-                <Link className={classes.navItemLink} style={ { background: backgroundNav } } to="/Voting" > voting </Link>
+                <Link className={classes.navItemLink} style={{ background: backgroundNav }} to="/Voting" > voting </Link>
             </li>
             <li className={classes.navItem}>
                 <div className={classes.navItemImg}>
                     <img src={navItemImg_2} alt=""></img>
                 </div>
-                <Link className={classes.navItemLink} style={ { background: backgroundNav } } to="/Breeds"> breeds </Link>
+                <Link className={classes.navItemLink} style={{ background: backgroundNav }} to="/Breeds"> breeds </Link>
             </li>
-            <li className={classes.navItem}>
+            {/* <li className={classes.navItem}>
                 <div className={classes.navItemImg}>
                     <img src={navItemImg_3} alt=""></img>
                 </div>
                 <Link className={classes.navItemLink} style={ { background: backgroundNav } } to="/Gallery"> gallery </Link>
-            </li>
-            <li className={classes.navItem}>
-                <div className={classes.navItemImg}>
-                    <img src={navItemImg_3} alt=""></img>
-                </div>
-                <Link className={classes.navItemLink} style={ { background: backgroundNav } } to="/"> homePage </Link>
-            </li>
+            </li> */}
         </ul>
     )
 }

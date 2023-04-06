@@ -19,7 +19,7 @@ export const DataReducer = (state = data, action) => {
                 ...state, apiData: action.payload
             }
         case NEW_DATA:
-            console.log(action.payload);
+            // console.log(action.payload);
             return {
                 ...state, apiDataNew: [...state.apiDataNew, action.payload]
             }
