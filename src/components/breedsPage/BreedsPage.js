@@ -25,7 +25,7 @@ const Breeds = () => {
 
 
     const refButtonLoad = React.useRef();
-    const [customCharacter, setCustomCharacter] = useState("50%");
+    const [customCharacter, setCustomCharacter] = useState("-40%");
 
     if (themeAct === true) {
         dispatch(themeDarkCreator());
@@ -51,11 +51,11 @@ const Breeds = () => {
         setCharacter(true);
 
         if (window.innerWidth <= "992") {
-            setCustomCharacter("0");
+            setCustomCharacter("-20%");
         }
 
         else {
-            setCustomCharacter("50%");
+            setCustomCharacter("-40%");
         }
 
         e.target.scrollIntoView({ block: "center", behavior: "smooth" });
@@ -90,20 +90,22 @@ const Breeds = () => {
                 }
             </div>
 
-            <button
-                onClick={useLoadData}
-                className={classes.loadMore} > load more </button>
-            <button
-                ref={refButtonLoad}
-                onClick={loadCustomCharacter}
-                className={classes.loadCustom} > load your own character </button>
-            {
-                character ?
-                    <div className={classes.breedsLoadArea}  style={{ top: customCharacter }}>
-                        <CustomLoad close={closeItemPopup}></CustomLoad>
-                    </div>
-                    : ''
-            }
+            <div className={classes.loadBtnWrapper}>
+                <button
+                    onClick={useLoadData}
+                    className={classes.loadMore} > load more </button>
+                <button
+                    ref={refButtonLoad}
+                    onClick={loadCustomCharacter}
+                    className={classes.loadCustom} > load your own character </button>
+                {
+                    character ?
+                        <div className={classes.breedsLoadArea} style={{ top: customCharacter }}>
+                            <CustomLoad close={closeItemPopup}></CustomLoad>
+                        </div>
+                        : ''
+                }
+            </div>
             <div>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                 dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
