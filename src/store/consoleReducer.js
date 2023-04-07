@@ -18,6 +18,5 @@ export const ConsoleReducer = (state = stateConsole, action) => {
 }
 
 export const consoleStateCreator = (payload) => {
-    console.log(payload);
     return { type: "CONSOLE_STATE", payload }
 }
