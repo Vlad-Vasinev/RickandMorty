@@ -13,6 +13,8 @@ import { dislikeStorageCreator } from "../../store/dislikeReducer";
 import { consoleStateCreator } from "../../store/consoleReducer";
 import { v4 as uuidv4 } from 'uuid';
 
+import ProgressBar from "../progressBar/ProgressBar";
+
 const ReactionBlock = () => {
 
     const dispatch = useDispatch();
@@ -142,6 +144,7 @@ const ReactionBlock = () => {
                                     onClick={() => clickElement(item.id)}
                                     className={classes.imgInner}
                                     key={uuidv4()}>
+                                    {/* <ProgressBar></ProgressBar> */}
                                     <img
                                         src={item.image} alt={item.name} />
                                     <div className={classes.imgTitle} style={{ color: primaryColor }}> {item.name} </div>
