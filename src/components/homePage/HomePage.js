@@ -60,7 +60,6 @@ const HomePage = () => {
                     <video loop muted playsInline webkit-playsinline="true" preload="auto" controls
                         className="procedures__video">
                         <source src={videoGuide} type="video/mp4" />
-                        {/* <source src="/video/procedures.mp4" type="video/mp4" /> */}
                     </video>
                 </div>
             </div>

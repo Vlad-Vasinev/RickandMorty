@@ -32,12 +32,12 @@ const NavList = () => {
                 </div>
                 <Link className={classes.navItemLink} style={{ background: backgroundNav }} to="/Breeds"> breeds </Link>
             </li>
-            {/* <li className={classes.navItem}>
+            <li className={classes.navItem}>
                 <div className={classes.navItemImg}>
                     <img src={navItemImg_3} alt=""></img>
                 </div>
-                <Link className={classes.navItemLink} style={ { background: backgroundNav } } to="/Gallery"> gallery </Link>
-            </li> */}
+                <Link className={classes.navItemLink} style={ { background: backgroundNav } } to="/ChessBoard"> Chess </Link>
+            </li>
         </ul>
     )
 }

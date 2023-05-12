@@ -14,6 +14,7 @@ import { ConsoleReducer } from './consoleReducer';
 import { BreedsReducer } from './breedsReducer';
 import { ThemeReducer } from './themeReducer';
 import { LoadReducer } from './loadReducer';
+import { ChessReducer } from './chessReducer';
 
 const mixReducer = combineReducers({
     data: DataReducer,
@@ -25,6 +26,7 @@ const mixReducer = combineReducers({
     breeds: BreedsReducer,
     theme: ThemeReducer,
     load: LoadReducer,
+    chess: ChessReducer,
 });
 
 const composedEnhancer = composeWithDevTools(

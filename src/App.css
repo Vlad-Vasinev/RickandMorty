@@ -57,7 +57,7 @@ button {
   position: relative;
   height: auto;
   text-align: center;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
   overflow-x: hidden;
 }
 

@@ -17,17 +17,24 @@ const Voting = () => {
     const themeAct = useSelector(state => state.theme.themeActive);
     const dispatch = useDispatch();
 
-    if ( themeAct === true ) {
-        dispatch( themeDarkCreator() );
+    if (themeAct === true) {
+        dispatch(themeDarkCreator());
     }
     else {
-        dispatch( themeLightCreator() );
+        dispatch(themeLightCreator());
     }
 
     const primaryColor = useSelector(state => state.theme.themeColorPrimary);
     const secondaryColor = useSelector(state => state.theme.themeColorSecondary);
 
     const bgDark = useSelector(state => state.theme.customBg);
+
+    const angleRes = (x1, y1, x2, y2) => {
+        console.log(Math.atan2(y1 - y2, x1 - x2)*(180/3.14));
+        return Math.atan2(y1 - y2, x1 - x2)
+    };
+
+    angleRes(1, 0, 1, 1);
 
     return (
         <div className={classes.votingInner}>
@@ -37,18 +44,18 @@ const Voting = () => {
                 <div className="logo">
                     <img src={logo} alt="This project's logo" />
                 </div>
-                <h1 className="primaryTitle" style={ {color: primaryColor} }>
+                <h1 className="primaryTitle" style={{ color: primaryColor }}>
                     Hi guest!
-                    <span className="primarySubtitle" style={ {color: secondaryColor} }> Welcome to my 2023 Front-end page </span>
+                    <span className="primarySubtitle" style={{ color: secondaryColor }}> Welcome to my 2023 Front-end page </span>
                 </h1>
-                <h2 className="secondaryTitle" style={ {color: primaryColor} }>
+                <h2 className="secondaryTitle" style={{ color: primaryColor }}>
                     Lets start using The Rick and Morty API
                 </h2>
                 <NavList></NavList>
             </div>
             <div className={classes.votingSecondary}>
                 <SearchBar></SearchBar>
-                <div className={ classes.votingSecondaryMain } style = { { backgroundColor: bgDark } }>
+                <div className={classes.votingSecondaryMain} style={{ backgroundColor: bgDark }}>
                     <VotingBlock></VotingBlock>
                 </div>
             </div>

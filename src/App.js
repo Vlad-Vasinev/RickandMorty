@@ -8,9 +8,9 @@ import Voting from "./components/votingPage/VotingPage";
 import LikesPage from "./components/likesPage/LikesPage";
 import FavouritePage from "./components/favouritePage/FavouritePage";
 import DislikePage from "./components/dislikePage/DislikePage";
+import ChessBoard from "./components/chessPage/ChessBoard";
 import { useDispatch, useSelector } from "react-redux";
 
-// import { useHistory } from 'react-router-dom';
 
 import { themeCreator } from "./store/themeReducer";
 import { themeLightCreator } from "./store/themeReducer";
@@ -58,11 +58,12 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/breeds" element={<Breeds />} />
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
+
           <Route path="/voting" element={<Voting />} />
           <Route path="/LikesPage" element={<LikesPage />} />
           <Route path="/FavouritePage" element={<FavouritePage />}></Route>
           <Route path="/DislikePage" element={<DislikePage />}></Route>
+          <Route path="/ChessBoard" element = { <ChessBoard /> }></Route>
           <Route path="/" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
@@ -71,3 +72,6 @@ export const App = () => {
 }
 
 export default App;
+
+
+{/* <Route path="/gallery" element={<Gallery />} /> */}
