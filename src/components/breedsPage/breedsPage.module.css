@@ -52,3 +52,58 @@
 .loadBtnWrapper{
     position: relative;
 }
+
+.breedsPageWrapper{
+    position: relative;
+}
+
+.breedsLoadArea{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all .3s;
+}
+
+.breedsList {
+    margin-top: 40px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 209px);
+    grid-gap: 34px;
+    padding-top: 14px;
+}
+
+.breedsItem {
+    max-width: 209px;
+    height: 140px;
+    width: 100%;
+}
+
+.breedsItem img{
+    border-radius: 10%;
+    width: 100%;
+    object-fit: cover;
+    height: 140px;
+}
+
+.loadMore, .loadCustom {
+    margin: 40px auto 20px;
+    color: #ffffff;
+    background-color: #0093EF;
+    border-radius: 10px;
+    max-width: 190px;
+    width: 100%;
+    border: none;
+    padding: 10px 4px;
+    box-sizing: border-box;
+}
+
+.loadCustom{
+    display: block;
+}
+
+.loadBtnWrapper{
+    position: relative;
+}
+

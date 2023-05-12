@@ -46,4 +46,52 @@
 
 @media(max-width: 992px) {
 
+    .votingInner {
+        padding: 70px 10px 30px 10px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    .votingPrimary {
+        max-width: 446px;
+        width: 100%;
+    }
+
+    .votingSecondary {
+        max-width: 680px;
+        width: 100%;
+        margin-left: 150px;
+    }
+
+    .votingSecondaryMain {
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    @media(max-width: 1360px) {
+        .votingSecondary {
+            max-width: 800px;
+            margin-left: 30px;
+        }
+    }
+
+    @media(max-width: 1000px) {
+        .votingInner {
+            flex-direction: column;
+        }
+
+        .votingPrimary {
+            margin-bottom: 46px;
+        }
+
+        .votingSecondary {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    @media(max-width: 992px) {}
+
 }

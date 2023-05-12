@@ -1,3 +1,4 @@
+
 const chess = {
     cells: [
         { id: "a1", coordinatex: 0, coordinatey: 0, color: "#7CC991", }, // 7CC991 - light green
